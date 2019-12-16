@@ -1,23 +1,23 @@
 FactoryBot.define do
   factory :bicycle do
-    model "Model"
-    colour "Red"
-    speeds 1
+    model { "Model" }
+    colour { "Red" }
+    speeds { 1 }
     style { Style.new(name: "Style") }
     brand { Brand.new(name: "Brand X", country: "Countrystan") }
 
     trait :fixie do
       style { Style.new(name: "Fixie") }
-      speeds 1
+      speeds { 1 }
     end
 
     trait :road do
       style { Style.new(name: "Road Bike") }
-      speeds 21
+      speeds { 21 }
     end
 
     trait :red do
-      colour 'Red'
+      colour { 'Red' }
     end
 
     trait :brand_x do
