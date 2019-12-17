@@ -37,6 +37,7 @@ group :test do
   gem 'database_cleaner', '~> 1.5'
   gem 'capybara-selenium'
   gem 'webdrivers', '~> 3.0'
+  gem 'simplecov'
 end
 
 group :development do

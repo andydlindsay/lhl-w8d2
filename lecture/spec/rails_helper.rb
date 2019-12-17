@@ -7,6 +7,12 @@ require 'spec_helper'
 require 'rspec/rails'
 require 'shoulda/matchers'
 
+if ENV['RAILS_ENV'] == 'test'
+  require 'simplecov'
+  SimpleCov.start 'rails'
+  puts "required simplecov"
+end
+
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :rspec
