@@ -51,9 +51,8 @@ RSpec.feature "Bicycle index", type: :feature, js: true do
   scenario "Filter bikes by model" do
     visit "/bicycles"
 
-    fill_in 'model', with: 'DESTROYENATOR'
+    fill_in 'model', with: @bike3.model
     save_screenshot('filtered_by_model_pre_search.png')
-    # puts find_field('First Name').value
     click_button 'Search!'
 
     expect(page).to have_css('div.bicycle', count: 1)
